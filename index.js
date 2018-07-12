@@ -2,15 +2,18 @@
 //CHALLENGE 1 ----------------------
 function lowerCaseStudentNames(studentArray)
 {
-  let lowercaseArray = []
-    for (let i =0; i < studentArray.length; i++)
-    {
-      lowercaseArray[i] = studentArray[i].toLowerCase() 
-      
-    }
-    return lowercaseArray
+  // let lowercaseArray = []
+  //   for (let i =0; i < studentArray.length; i++)
+  //   {
+  //     lowercaseArray[i] = studentArray[i].toLowerCase()
+  //   }
+  //   return lowercaseArray
+  return studentArray.map(suppFunction)
 }
 
+function suppFunction(str){
+  return str.toLowerCase()
+}
 //console.log(lowerCaseStudentNames(['Adele', 'Beyoncé', 'Lady', 'Madonna', 'Rihanna', 'Taylor']));
 
 //CHALLENGE 2---------------------
@@ -23,7 +26,7 @@ function nameToAttributes(nameArray)
   {
     tempArray = nameArray[i].split(" ");
     // ^['Amy', 'Adams']
-    transformedArray.push({'firstName':tempArray[0], 'lastName': tempArray[1]})
+    transformedArray.push({'firstName':tempArray[0], 'lastName': tempArray[1]});
     
     //tempObject['firstName'] = tempArray[0] //does not work
     //tempObject['lastName'] = tempArray[1] //does not work
